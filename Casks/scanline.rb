@@ -11,8 +11,13 @@ cask "scanline" do
 
   app "Scanline.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Scanline.app"]
+  end
+
   caveats <<~EOS
     #{token} is not signed with an Apple Developer ID.
-    macOS Gatekeeper quarantine is disabled for this cask.
+    Quarantine attribute is removed automatically after install.
   EOS
 end

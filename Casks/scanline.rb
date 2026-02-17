@@ -10,4 +10,9 @@ cask "scanline" do
   depends_on macos: ">= :sonoma"
 
   app "Scanline.app"
+
+  caveats <<~EOS
+    #{token} is not signed with an Apple Developer ID.
+    macOS Gatekeeper quarantine is disabled for this cask.
+  EOS
 end

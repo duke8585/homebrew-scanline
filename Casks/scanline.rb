@@ -7,7 +7,7 @@ cask "scanline" do
   desc "CRT-style full-screen calendar overlays for macOS"
   homepage "https://github.com/duke8585/scanline-macos"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Scanline.app"
 

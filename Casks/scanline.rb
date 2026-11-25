@@ -11,9 +11,8 @@ cask "scanline" do
 
   app "Scanline.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Scanline.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Scanline.app"]
   end
 
   caveats <<~EOS

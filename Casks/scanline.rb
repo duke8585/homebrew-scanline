@@ -1,6 +1,6 @@
 cask "scanline" do
-  version "0.6.1"
-  sha256 "116c287551bc463bf407c94c0cff8c74a942ed454058fc4021261bac63614040"
+  version "0.6.2"
+  sha256 "859ffe3e01a56358bf6ed75a43cbb63fd246dd27b71be3c363301ae8f3eb1e51"
 
   url "https://github.com/duke8585/scanline-macos/releases/download/v#{version}/Scanline-#{version}.zip"
   name "Scanline"
